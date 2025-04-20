@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Changed Title -->
+    <title>Script & Notes Breakdown</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./icon-192x192.png" type="image/png">
+    <link rel="shortcut icon" href="./icon-192x192.png" type="image/png">
+    <link rel="apple-touch-icon" href="./icon-192x192.png">
+    <link rel="manifest" href="./manifest.webmanifest">
+</head>
+<body>
+    <div class="container">
+        <!-- Changed H1 -->
+        <h1>Script & Notes Breakdown Tool</h1>
+        <!-- Updated Instructions -->
+        <p class="instructions">
+            Paste your detailed script breakdown below. Each scene block should contain a line starting with <code>Script Segment:</code> for the voiceover. All other lines in the block will be added to the scene's Notes.
+            <br>
+            <strong>Important:</strong> Separate each complete scene block from the next by typing <code>---</code> on its own line.
+        </p>
+        <textarea
+            id="scriptInput"
+            placeholder="Paste your structured script here, separating scene blocks with --- on its own line..."
+            spellcheck="false"
+            aria-label="Script input"
+        ></textarea>
+        <button id="convertButton">Create</button>
+        <div id="status" role="status" aria-live="polite"></div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+      // Service worker registration code remains the same
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js')
+            .then(registration => {
+              console.log('Service Worker registered successfully:', registration.scope);
+            })
+            .catch(error => {
+              console.log('Service Worker registration failed:', error);
+            });
+        });
+      }
+    </script>
+</body>
+</html>
