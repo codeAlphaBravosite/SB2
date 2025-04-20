@@ -98,7 +98,7 @@ function breakIntoScenes(text) {
         }
 
         // Join the notes lines back together, preserving line breaks, and trim final result
-        scene.notes = notesLines.join('\n').trim();
+        scene.notes = notesLines.join('\n\n').trim();
 
         return scene;
     });
