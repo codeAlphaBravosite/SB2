@@ -1,4 +1,4 @@
-const VERSION = '1.1.4';
+const VERSION = '1.1.5';
 const CACHE_NAME = `sb2-cache-${VERSION}`;
 
 const STATIC_CACHE_URLS = [
