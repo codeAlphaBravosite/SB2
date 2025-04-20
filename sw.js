@@ -1,5 +1,5 @@
 const VERSION = '1.1.0';
-const CACHE_NAME = `sbtool-cache-${VERSION}`;
+const CACHE_NAME = `sb2-cache-${VERSION}`;
 
 const STATIC_CACHE_URLS = [
   './',
