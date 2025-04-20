@@ -146,11 +146,11 @@ convertButton.addEventListener('click', async () => {
     updateStatus('Processing your script data...');
     try {
         const numberOfScenes = breakIntoScenes(text); // Now returns the count
-        updateStatus(`✅ Successfully created ${numberOfScenes} scenes! (Go to ⧉StoryboardPro and refresh)`);
+        updateStatus(`Successfully created ${numberOfScenes} scenes! (Go to ⧉StoryboardPro and refresh)`);
     } catch (error) {
         console.error('Processing error:', error);
         // Provide more specific feedback if possible
-        updateStatus(`❌ Error: ${error.message}`, true);
+        updateStatus(`Error: ${error.message}`, true);
     } finally {
         convertButton.disabled = false;
     }
