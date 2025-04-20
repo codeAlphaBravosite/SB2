@@ -52,7 +52,7 @@ function breakIntoScenes(text) {
 
     // Use a clear delimiter like '----' on its own line to split scene blocks
     // Split by newline, three dashes, newline. Handles variations in whitespace around '----'.
-    const sceneBlocks = text.split(/^\s*----\s*$/m)
+    const sceneBlocks = text.split(/^\s*~\s*$/m)
         .map(block => block.trim())
         .filter(block => block); // Remove empty blocks
 
