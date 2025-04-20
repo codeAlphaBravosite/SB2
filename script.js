@@ -44,20 +44,20 @@ function saveStoryboards(storyboards) {
     }
 }
 
-// --- Updated breakIntoScenes function ---
+// ---- Updated breakIntoScenes function ----
 function breakIntoScenes(text) {
     if (!text || typeof text !== 'string') {
         throw new Error('Invalid input: text must be a non-empty string');
     }
 
-    // Use a clear delimiter like '---' on its own line to split scene blocks
-    // Split by newline, three dashes, newline. Handles variations in whitespace around '---'.
-    const sceneBlocks = text.split(/^\s*---\s*$/m)
+    // Use a clear delimiter like '----' on its own line to split scene blocks
+    // Split by newline, three dashes, newline. Handles variations in whitespace around '----'.
+    const sceneBlocks = text.split(/^\s*----\s*$/m)
         .map(block => block.trim())
         .filter(block => block); // Remove empty blocks
 
     if (sceneBlocks.length === 0) {
-        throw new Error('No valid scene blocks found. Ensure blocks are separated by "---" on its own line.');
+        throw new Error('No valid scene blocks found. Ensure blocks are separated by "----" on its own line.');
     }
 
     const storyboard = createStoryboard('Created via script');
