@@ -1,7 +1,7 @@
 {
   "name": "SB2",
   "short_name": "SB2",
-  "description": "A powerful SB Tool app",
+  "description": "A powerful SB Tool",
   "start_url": "./index.html",
   "scope": ".",
   "display": "standalone",
