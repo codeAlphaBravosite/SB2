@@ -1,4 +1,4 @@
-const VERSION = '1.1.0';
+const VERSION = '1.1.1';
 const CACHE_NAME = `sb2-cache-${VERSION}`;
 
 const STATIC_CACHE_URLS = [
@@ -22,7 +22,7 @@ self.addEventListener('activate', event => {
     caches.keys().then(cacheNames => {
       return Promise.all(
         cacheNames.map(cacheName => {
-          if (cacheName.startsWith('sbtool-cache-') && cacheName !== CACHE_NAME) {
+          if (cacheName.startsWith('sb2-cache-') && cacheName !== CACHE_NAME) {
             return caches.delete(cacheName);
           }
         })
